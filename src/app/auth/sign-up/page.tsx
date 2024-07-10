@@ -24,9 +24,9 @@ export default function page() {
   }
 
   return (
-    <div className='bg-black w-full h-screen'>
-      <div className='grid grid-cols-2 w-full h-screen mx-auto max-w-7xl'>
-        <div className='w-full h-screen bg-white flex justify-center'>
+    <div className=' w-full h-screen'>
+      <div className='grid grid-cols-2 w-full h-screen mx-auto max-w-7xl shadow-xl'>
+        <div className='w-full h-screen bg-white flex justify-center border-l '>
           <div className='w-[65%] h-full bg-white flex flex-col justify-center gap-7'>
             <h3 className='font-bold'>Fiber</h3>
             <p className='font-bold text-3xl'>Create your Fiber account</p>
