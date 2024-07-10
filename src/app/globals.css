@@ -41,3 +41,25 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.swiper-wrapper {
+  padding-bottom: 50px;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+  width: 10px;
+  height: 10px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #a587ff;
+  width: 10px;
+  height: 10px;
+}

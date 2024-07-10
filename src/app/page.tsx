@@ -2,6 +2,7 @@ import Button from '@/components/button';
 import Card from '@/components/card';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
+import Slider from '@/components/comments-slider';
 import Image from 'next/image';
 
 export default function Home() {
@@ -30,7 +31,7 @@ export default function Home() {
     <>
       <Header />
       <main className='px-[5%] mx-auto max-w-7xl'>
-        <section className='py-20 flex flex-col gap-3'>
+        <section className='pt-20 flex flex-col gap-3'>
           <h2 className='font-semibold text-primary'>Why Fiber?</h2>
           <p className='text-4xl font-bold leading-[1.2]'>
             A good portfolio means good <br /> employability.
@@ -72,6 +73,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <Slider />
       <Footer />
     </>
   );

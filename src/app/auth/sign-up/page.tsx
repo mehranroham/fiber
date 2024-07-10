@@ -1,8 +1,8 @@
 import Button from '@/components/button';
 import Input from '@/components/input';
 import PassInput from '@/components/pass-input';
+import SingleSlider from '@/components/signup-slider';
 import type { Metadata } from 'next';
-import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Fiber SignUp Page',
@@ -62,22 +62,8 @@ export default function page() {
             </form>
           </div>
         </div>
-        <div className='w-full h-screen bg-primary text-white'>
-          <div className='w-[70%] h-full flex flex-col gap-5 items-center justify-center mx-auto'>
-            <Image
-              src={'/assets/Sign-Up-Image.png'}
-              alt='Sign-Up-Image'
-              width={500}
-              height={500}
-            />
-            <h4 className='font-bold text-3xl px-[10%]'>
-              Unparalleled Templates
-            </h4>
-            <p className='font-light text-center px-[10%]'>
-              Crafted by a team of professional designers, our templates are
-              eunparalleled in the market.
-            </p>
-          </div>
+        <div className='w-full h-screen bg-primary text-white flex justify-center items-center'>
+          <SingleSlider />
         </div>
       </div>
     </div>

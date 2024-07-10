@@ -18,7 +18,9 @@ export default function Header() {
       <section className='w-full h-screen px-[5%] mx-auto max-w-7xl'>
         <nav className='grid grid-cols-3 items-center h-[120px]'>
           {/* logo */}
-          <span className='font-bold text-left text-lg'>Fiber</span>
+          <span className='font-bold text-left text-lg cursor-pointer'>
+            Fiber
+          </span>
           {/* Menu list */}
           <ul className=' flex items-center justify-center gap-5'>
             {menu.map((item) => {
