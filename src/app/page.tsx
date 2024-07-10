@@ -1,8 +1,8 @@
-import Button from '@/components/button';
-import Card from '@/components/card';
-import Footer from '@/components/footer';
-import Header from '@/components/header';
-import Slider from '@/components/comments-slider';
+import Button from '@/components/ui/button';
+import Card from '@/components/templates/card';
+import Footer from '@/components/templates/footer';
+import Header from '@/components/templates/header';
+import Slider from '@/components/slider/comments-slider';
 import Image from 'next/image';
 
 export default function Home() {

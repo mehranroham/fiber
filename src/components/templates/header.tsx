@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import Button from './button';
+import Button from '../ui/button';
 import { Inter } from 'next/font/google';
-import Stars from './stars';
+import Stars from '../icons/stars';
 import Link from 'next/link';
-import Check from './check';
+import Check from '../icons/check';
 
 const inter = Inter({
   subsets: ['latin'],

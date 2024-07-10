@@ -36,23 +36,47 @@ export default function Slider() {
       button: "View Janice's Portfolio",
       src: '/assets/User-Avatar-3.svg',
     },
+    {
+      name: 'Janice Dave',
+      revenue: '$20k in revenue',
+      comment:
+        'I only just started freelancing this year have already made more than I ever in my full-time job. The templates are so amazing.',
+      button: "View Janice's Portfolio",
+      src: '/assets/User-Avatar-3.svg',
+    },
+    {
+      name: 'Janice Dave',
+      revenue: '$20k in revenue',
+      comment:
+        'I only just started freelancing this year have already made more than I ever in my full-time job. The templates are so amazing.',
+      button: "View Janice's Portfolio",
+      src: '/assets/User-Avatar-3.svg',
+    },
+    {
+      name: 'Janice Dave',
+      revenue: '$20k in revenue',
+      comment:
+        'I only just started freelancing this year have already made more than I ever in my full-time job. The templates are so amazing.',
+      button: "View Janice's Portfolio",
+      src: '/assets/User-Avatar-3.svg',
+    },
   ];
 
   return (
-    <section className='mt-5 mb-16 cursor-pointer'>
+    <section className='mt-5 mb-16 cursor-pointer max-w-7xl ml-[13%]'>
       <Swiper
-        slidesPerView={3.8}
+        slidesPerView={3.3}
         spaceBetween={50}
         pagination={{
           clickable: true,
         }}
         className='mySwiper'
       >
-        <SwiperSlide></SwiperSlide>
+        {/* <SwiperSlide></SwiperSlide> */}
         {comments.map((comment) => {
           return (
             <SwiperSlide key={comment.name} className='w-full'>
-              <div className='flex flex-col p-5 gap-3 border-2'>
+              <div className='flex flex-col p-5 gap-3 border-2 rounded-md'>
                 <div className='flex items-center gap-3'>
                   <Image
                     alt='Avatar'
@@ -67,7 +91,10 @@ export default function Slider() {
                     <p className='text-sm'>{comment.revenue}</p>
                   </div>
                 </div>
-                <p>{comment.comment}</p>
+                <p className='line-clamp-4'>{comment.comment}</p>
+                <button className='font-bold text-primary border-2 py-3'>
+                  {comment.button}
+                </button>
               </div>
             </SwiperSlide>
           );

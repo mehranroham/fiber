@@ -1,7 +1,7 @@
-import Button from '@/components/button';
-import Input from '@/components/input';
-import PassInput from '@/components/pass-input';
-import SingleSlider from '@/components/signup-slider';
+import Button from '@/components/ui/button';
+import Input from '@/components/ui/input';
+import PassInput from '@/components/ui/pass-input';
+import SingleSlider from '@/components/slider/signup-slider';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
