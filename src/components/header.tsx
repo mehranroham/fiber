@@ -31,10 +31,10 @@ export default function Header() {
           </ul>
           <div className='flex items-center gap-5 justify-end'>
             <Button blue={false} bg={false}>
-              Sign In
+              <Link href='/auth/sign-in'>Sign In</Link>
             </Button>
             <Button blue bg={true}>
-              Sign Up
+              <Link href='/auth/sign-up'>Sign Up</Link>
             </Button>
           </div>
         </nav>

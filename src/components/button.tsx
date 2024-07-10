@@ -12,11 +12,11 @@ export default function Button({
       <button
         className={`${
           blue && bg
-            ? 'bg-primary text-white'
+            ? 'bg-primary text-white '
             : !blue && bg
             ? 'bg-white text-primary'
             : 'bg-none'
-        } font-bold py-3.5 px-6 rounded-md`}
+        } font-bold py-3.5 px-6 rounded-md transition-colors duration-300 hover:bg-blue-700 hover:text-white`}
       >
         {children}
       </button>

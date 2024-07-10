@@ -35,7 +35,7 @@ export default function Home() {
           <p className='text-4xl font-bold leading-[1.2]'>
             A good portfolio means good <br /> employability.
           </p>
-          <div className='grid grid-cols-3 gap-16'>
+          <div className='grid grid-cols-3 gap-16 mt-7'>
             {cards.map((card) => {
               return (
                 <Card

@@ -4,11 +4,11 @@ import './globals.css';
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '900'],
+  weight: ['300', '400', '500', '600', '700', '900'],
 });
 
 export const metadata: Metadata = {
-  title: 'Fiber',
+  title: 'Fiber | Create Youre Portfolio',
   description: 'Create Youre Portfolio in Minutes',
 };
 
