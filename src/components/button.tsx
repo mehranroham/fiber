@@ -1,15 +1,21 @@
 export default function Button({
   children,
   bg,
+  blue,
 }: Readonly<{
   children: React.ReactNode;
   bg: boolean;
+  blue: boolean;
 }>) {
   return (
     <>
       <button
         className={`${
-          bg ? 'bg-primary text-white' : 'bg-none'
+          blue && bg
+            ? 'bg-primary text-white'
+            : !blue && bg
+            ? 'bg-white text-primary'
+            : 'bg-none'
         } font-bold py-3.5 px-6 rounded-md`}
       >
         {children}

@@ -17,6 +17,7 @@ const config: Config = {
       colors: {
         'header-bg': '#FBF8F3',
         primary: '#4D13D1',
+        content: '#555555',
       },
     },
   },

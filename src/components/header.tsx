@@ -22,12 +22,20 @@ export default function Header() {
           {/* Menu list */}
           <ul className=' flex items-center justify-center gap-5'>
             {menu.map((item) => {
-              return <li key={item}>{item}</li>;
+              return (
+                <li className='cursor-pointer' key={item}>
+                  {item}
+                </li>
+              );
             })}
           </ul>
           <div className='flex items-center gap-5 justify-end'>
-            <Button bg={false}>Sign In</Button>
-            <Button bg={true}>Sign Up</Button>
+            <Button blue={false} bg={false}>
+              Sign In
+            </Button>
+            <Button blue bg={true}>
+              Sign Up
+            </Button>
           </div>
         </nav>
         <section className='grid grid-cols-2'>
@@ -44,7 +52,9 @@ export default function Header() {
               with dozens of premade,beautiful templates
             </p>
             <div className='flex items-center gap-8'>
-              <Button bg>Start Free Trial</Button>
+              <Button blue bg>
+                Start Free Trial
+              </Button>
               <Link
                 className='font-bold underline underline-offset-4 text-primary'
                 href={'/'}
