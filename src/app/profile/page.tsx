@@ -26,7 +26,7 @@ export default async function page() {
 
   return (
     <div className='w-full h-screen grid grid-cols-6 border-r-2 shadow-lg font-Poppins-Medium'>
-      <ul className='col-span-1 bg-primary flex items-center flex-col py-10 gap-7 text-white'>
+      <ul className='lg:col-span-1 sm:col-span-2 col-span-6 bg-primary flex items-center flex-col py-10 gap-7 text-white'>
         <div className='flex flex-col gap-5 items-center justify-between mb-5'>
           <Image
             src={'/assets/avatar.png'}
@@ -36,18 +36,18 @@ export default async function page() {
           />
         </div>
         <li>
-          <Link className='text-xl' href={'/'}>
+          <Link className='text-lg' href={'/'}>
             Home
           </Link>
         </li>
         <li>
-          <Link className='text-xl' href={'/comments'}>
+          <Link className='text-lg' href={'/comments'}>
             All Comments
           </Link>
         </li>
         <li>
           <Link
-            className='text-xl underline underline-offset-8'
+            className='text-lg underline underline-offset-8 flex justify-center items-center text-center'
             href={'/profile'}
           >
             Create Comment
@@ -60,8 +60,8 @@ export default async function page() {
         </form>
       </ul>
 
-      <div className='col-span-5 bg-header-bg grid grid-cols-2 gap-16 px-10'>
-        <div className='w-full h-screen mt-10 flex flex-col gap-5'>
+      <div className='lg:col-span-5 sm:col-span-4 col-span-6 bg-header-bg grid grid-cols-2 gap-x-5 px-10'>
+        <div className='w-full py-14 flex flex-col gap-5 col-span-2 lg:col-span-1'>
           <div className='flex flex-col gap-5 mb-10'>
             <h3 className='font-Poppins-Bold text-center text-lg border-b-2 pb-1.5'>
               User Info
@@ -109,7 +109,7 @@ export default async function page() {
             </Button>
           </form>
         </div>
-        <ul className='mt-10 flex flex-col gap-5'>
+        <ul className='lg:mt-10 flex flex-col gap-5 col-span-2 lg:col-span-1 mb-12'>
           <h3 className='font-Poppins-Bold text-center text-lg border-b-2 pb-1.5'>
             Your Comments
           </h3>
