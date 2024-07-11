@@ -5,6 +5,7 @@ import validatePassword from '@/helpers/validatePassword';
 import prisma from '@/lib/db';
 import bcrypt from 'bcryptjs';
 import * as jose from 'jose';
+import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
 export async function SigninAction(prevState: any, formData: FormData) {
@@ -51,10 +52,16 @@ export async function SigninAction(prevState: any, formData: FormData) {
 
   const jwt = await new jose.SignJWT({})
     .setProtectedHeader({ alg })
-    .setExpirationTime('1h')
+    .setExpirationTime('72h')
     .setSubject(user.id)
     .sign(secret);
 
-  console.log('token: ', jwt);
+  cookies().set('authorization', jwt, {
+    httpOnly: true,
+    secure: true,
+    expires: Date.now() + 24 * 60 * 60 * 1000 * 3, // 3 days
+    path: '/',
+    sameSite: 'strict',
+  });
   redirect('/profile');
 }
