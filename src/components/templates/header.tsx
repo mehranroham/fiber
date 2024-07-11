@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import Stars from '../icons/stars';
 import Link from 'next/link';
 import Check from '../icons/check';
+import Nav from './nav';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -11,35 +12,10 @@ const inter = Inter({
 });
 
 export default function Header() {
-  const menu = ['Community', 'Pricing', 'Features'];
-
   return (
     <header className={`${inter.className} bg-header-bg w-full`}>
       <section className='w-full h-screen px-[5%] mx-auto max-w-7xl'>
-        <nav className='grid grid-cols-3 items-center h-[120px]'>
-          {/* logo */}
-          <span className='font-bold text-left text-lg cursor-pointer'>
-            Fiber
-          </span>
-          {/* Menu list */}
-          <ul className=' flex items-center justify-center gap-5'>
-            {menu.map((item) => {
-              return (
-                <li className='cursor-pointer' key={item}>
-                  {item}
-                </li>
-              );
-            })}
-          </ul>
-          <div className='flex items-center gap-5 justify-end'>
-            <Button blue={false} bg={false}>
-              <Link href='/auth/sign-in'>Sign In</Link>
-            </Button>
-            <Button blue bg={true}>
-              <Link href='/auth/sign-up'>Sign Up</Link>
-            </Button>
-          </div>
-        </nav>
+        <Nav />
         <section className='grid grid-cols-2'>
           <div className='flex flex-col justify-center h-[calc(100vh_-_120px)] w-full gap-4'>
             <div className='flex items-center gap-4'>
