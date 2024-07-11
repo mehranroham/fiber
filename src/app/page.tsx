@@ -4,8 +4,14 @@ import Footer from '@/components/templates/footer';
 import Header from '@/components/templates/header';
 import Slider from '@/components/slider/comments-slider';
 import Image from 'next/image';
+import prisma from '@/lib/db';
 
-export default function Home() {
+export default async function Home() {
+  const comments = await prisma.comment.findMany({
+    include: { auther: true },
+    orderBy: { createdAt: 'desc' },
+  });
+
   const cards = [
     {
       title: 'Build in minutes',
@@ -73,7 +79,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Slider />
+      <Slider comments={comments} />
       <Footer />
     </>
   );

@@ -8,60 +8,24 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import Image from 'next/image';
 
-// import required modules
+type Comment = {
+  auther: {
+    id: string;
+    email: string;
+    name: string;
+    password: string;
+  };
+} & {
+  id: string;
+  revenue: number;
+  content: string;
+  updatedAt: Date;
+  createdAt: Date;
+  avatar: string;
+  authorId: string;
+};
 
-export default function Slider() {
-  const comments = [
-    {
-      name: 'Sarah Andrews',
-      revenue: '$100k in revenue',
-      comment:
-        'Setting up my portfolio with Fiber took no more than 10 minutes. Since then, my portfolio has attracted a lot of clients and made me more than $100k.',
-      button: "View Sarah's Portfolio",
-      src: '/assets/User-Avatar-1.svg',
-    },
-    {
-      name: 'Mathew Higgins',
-      revenue: '$20k in revenue',
-      comment:
-        "I have been getting A LOT of leads ever since I used Fiber's premade templates, now I just need to work on my case studies and I'll be ready to go!",
-      button: "View Mathew's Portfolio",
-      src: '/assets/User-Avatar-2.svg',
-    },
-    {
-      name: 'Janice Dave',
-      revenue: '$20k in revenue',
-      comment:
-        'I only just started freelancing this year have already made more than I ever in my full-time job. The templates are so amazing.',
-      button: "View Janice's Portfolio",
-      src: '/assets/User-Avatar-3.svg',
-    },
-    {
-      name: 'Janice Dss',
-      revenue: '$20k in revenue',
-      comment:
-        'I only just started freelancing this year have already made more than I ever in my full-time job. The templates are so amazing.',
-      button: "View Janice's Portfolio",
-      src: '/assets/User-Avatar-3.svg',
-    },
-    {
-      name: 'Janice Dedg',
-      revenue: '$20k in revenue',
-      comment:
-        'I only just started freelancing this year have already made more than I ever in my full-time job. The templates are so amazing.',
-      button: "View Janice's Portfolio",
-      src: '/assets/User-Avatar-3.svg',
-    },
-    {
-      name: 'Janice Dthc',
-      revenue: '$20k in revenue',
-      comment:
-        'I only just started freelancing this year have already made more than I ever in my full-time job. The templates are so amazing.',
-      button: "View Janice's Portfolio",
-      src: '/assets/User-Avatar-3.svg',
-    },
-  ];
-
+export default function Slider({ comments }: { comments: Comment[] }) {
   return (
     <section className='mt-5 mb-16 cursor-pointer max-w-7xl ml-[13%]'>
       <Swiper
@@ -75,25 +39,25 @@ export default function Slider() {
         {/* <SwiperSlide></SwiperSlide> */}
         {comments.map((comment) => {
           return (
-            <SwiperSlide key={comment.name} className='w-full'>
+            <SwiperSlide key={comment.auther.id} className='w-full'>
               <div className='flex flex-col p-5 gap-3 border-2 rounded-md'>
                 <div className='flex items-center gap-3'>
                   <Image
                     alt='Avatar'
-                    src={comment.src}
+                    src={comment.avatar}
                     width={50}
                     height={50}
                   />
                   <div className='flex flex-col'>
                     <h5 className='text-sm font-bold text-primary'>
-                      {comment.name}
+                      {comment.auther.name}
                     </h5>
-                    <p className='text-sm'>{comment.revenue}</p>
+                    <p className='text-sm'>{`$${comment.revenue}k in revenue`}</p>
                   </div>
                 </div>
-                <p className='line-clamp-4'>{comment.comment}</p>
+                <p className='line-clamp-4'>{comment.content}</p>
                 <button className='font-bold text-primary border-2 py-3'>
-                  {comment.button}
+                  {`View ${comment.auther.name.split(' ')[0]}'s Portfolio`}
                 </button>
               </div>
             </SwiperSlide>

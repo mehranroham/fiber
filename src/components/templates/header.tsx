@@ -23,7 +23,7 @@ export default function Header() {
               <p className='pt-0.5'>Rated 4.8/5 (243 reviews)</p>
             </div>
             <h1 className='text-5xl font-bold leading-[1.2]'>
-              Create Youre Portfolio in Minutes.
+              Create Your Portfolio in Minutes.
             </h1>
             <p>
               With Fiber, you can setup your own personal portfolio in minutes

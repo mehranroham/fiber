@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Fiber | Create Youre Portfolio',
-  description: 'Create Youre Portfolio in Minutes',
+  title: 'Fiber | Create Your Portfolio',
+  description: 'Create Your Portfolio in Minutes',
 };
 
 export default function RootLayout({
