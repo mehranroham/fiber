@@ -1,36 +1,30 @@
+'use client';
+
 import Button from '@/components/ui/button';
 import Input from '@/components/ui/input';
 import PassInput from '@/components/ui/pass-input';
 import SingleSlider from '@/components/slider/signup-slider';
-import type { Metadata } from 'next';
+import { useFormState } from 'react-dom';
+import { SignupAction } from '@/actions/signup';
 
-export const metadata: Metadata = {
-  title: 'Fiber SignUp Page',
-  description: 'SignUp in Fiber',
+const initialState = {
+  message: '',
 };
 
-export default function page() {
-  async function getData(formData: FormData) {
-    'use server';
-
-    const rawFormData = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      checkbox: formData.get('checkbox'),
-      password: formData.get('password'),
-    };
-
-    console.log(rawFormData);
-  }
+export default function Page() {
+  const [state, formAction] = useFormState(SignupAction, initialState);
 
   return (
-    <div className=' w-full h-screen'>
+    <div className='w-full h-screen'>
       <div className='grid grid-cols-2 w-full h-screen mx-auto max-w-7xl shadow-xl'>
         <div className='w-full h-screen bg-white flex justify-center border-l '>
           <div className='w-[65%] h-full bg-white flex flex-col justify-center gap-7'>
             <h3 className='font-bold'>Fiber</h3>
             <p className='font-bold text-3xl'>Create your Fiber account</p>
-            <form id='form' action={getData} className='flex flex-col gap-5'>
+            <form id='form' action={formAction} className='flex flex-col gap-5'>
+              {state?.message !== '' && (
+                <p className='text-red-600'>* {state?.message}</p>
+              )}
               <Input id='name' type='text' placeholder='John Doe'>
                 Your Name
               </Input>

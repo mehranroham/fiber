@@ -1,26 +1,19 @@
+'use client';
+
 import Button from '@/components/ui/button';
 import Input from '@/components/ui/input';
 import PassInput from '@/components/ui/pass-input';
 import SingleSlider from '@/components/slider/signup-slider';
 import type { Metadata } from 'next';
+import { SigninAction } from '@/actions/signin';
+import { useFormState } from 'react-dom';
 
-export const metadata: Metadata = {
-  title: 'Fiber Signin Page',
-  description: 'Signin into Fiber',
+const initialState = {
+  message: '',
 };
 
-export default function page() {
-  async function getData(formData: FormData) {
-    'use server';
-
-    const rawFormData = {
-      email: formData.get('email'),
-
-      password: formData.get('password'),
-    };
-
-    console.log(rawFormData);
-  }
+export default function Page() {
+  const [state, formAction] = useFormState(SigninAction, initialState);
 
   return (
     <div className=' w-full h-screen'>
@@ -32,7 +25,10 @@ export default function page() {
           <div className='w-[65%] h-full bg-white flex flex-col justify-center gap-7'>
             <h3 className='font-bold'>Fiber</h3>
             <p className='font-bold text-3xl'>Login to your Fiber account</p>
-            <form id='form' action={getData} className='flex flex-col gap-5'>
+            <form id='form' action={formAction} className='flex flex-col gap-5'>
+              {state?.message !== '' && (
+                <p className='text-red-600'>* {state?.message}</p>
+              )}
               <Input id='email' type='email' placeholder='John@Example.xom'>
                 E-Mail
               </Input>
