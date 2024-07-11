@@ -27,12 +27,16 @@ export default function Nav() {
         })}
       </ul>
       <div className='flex items-center gap-5 justify-end'>
-        <Button blue={false} bg={false}>
-          <Link href='/auth/sign-in'>Sign In</Link>
-        </Button>
-        <Button blue bg={true}>
-          <Link href='/auth/sign-up'>Sign Up</Link>
-        </Button>
+        <Link href='/auth/sign-in'>
+          <Button blue={false} bg={false}>
+            Sign In
+          </Button>
+        </Link>
+        <Link href='/auth/sign-up'>
+          <Button blue bg={true}>
+            Sign Up
+          </Button>
+        </Link>
       </div>
     </nav>
   );
