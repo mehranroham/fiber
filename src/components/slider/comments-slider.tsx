@@ -27,10 +27,16 @@ type Comment = {
 
 export default function Slider({ comments }: { comments: Comment[] }) {
   return (
-    <section className='mt-5 mb-16 cursor-pointer max-w-7xl ml-[13%]'>
+    <section className='mt-5 mb-16 cursor-pointer max-w-7xl md:ml-[10%] ml-5'>
       <Swiper
-        slidesPerView={3.3}
-        spaceBetween={50}
+        slidesPerView={1}
+        spaceBetween={10}
+        breakpoints={{
+          320: { slidesPerView: 1, spaceBetween: 10 },
+          480: { slidesPerView: 1.5, spaceBetween: 20 },
+          768: { slidesPerView: 2, spaceBetween: 30 },
+          1024: { slidesPerView: 3.8, spaceBetween: 30 },
+        }}
         pagination={{
           clickable: true,
         }}
@@ -39,7 +45,7 @@ export default function Slider({ comments }: { comments: Comment[] }) {
         {/* <SwiperSlide></SwiperSlide> */}
         {comments.map((comment) => {
           return (
-            <SwiperSlide key={comment.auther.id} className='w-full'>
+            <SwiperSlide key={comment.id} className='w-full'>
               <div className='flex flex-col p-5 gap-3 border-2 rounded-md'>
                 <div className='flex items-center gap-3'>
                   <Image

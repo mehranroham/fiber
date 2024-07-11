@@ -6,7 +6,8 @@ export default async function page({ params }: { params: { slug: string } }) {
   const { slug } = params;
 
   const comment = await prisma.comment.findUnique({
-    where: { author: slug.replaceAll('-', ' ') },
+    where: { id: slug },
+    include: { auther: true },
   });
 
   if (!comment) {
@@ -20,7 +21,7 @@ export default async function page({ params }: { params: { slug: string } }) {
           <Image alt='Avatar' src={comment.avatar} width={150} height={150} />
           <div className='flex flex-col gap-2'>
             <h3 className='text-3xl font-bold text-primary'>
-              {comment.author}
+              {comment.auther.name}
             </h3>
             <p className='text-lg'>${comment.revenue}k in revenue</p>
           </div>

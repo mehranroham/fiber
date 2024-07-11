@@ -8,8 +8,8 @@ const inter = Inter({
 export default function Footer() {
   return (
     <footer className={`${inter.className} bg-header-bg w-full `}>
-      <div className='w-full py-12 px-[5%] mx-auto max-w-7xl grid grid-cols-6 text-content'>
-        <div className='col-span-2 flex flex-col gap-3'>
+      <div className='w-full py-12 px-[5%] mx-auto max-w-7xl grid grid-cols-6 gap-y-10 gap-5 text-content'>
+        <div className='flex flex-col gap-3 md:col-span-4 col-span-6 lg:col-span-2'>
           <h5 className='font-bold text-black'>Fiber</h5>
           <p>
             With Fiber, you can setup your own personal portfolio in minutes
@@ -17,7 +17,7 @@ export default function Footer() {
           </p>
           <p className='mt-3'>Made with ❤️ by Mehran Roham.</p>
         </div>
-        <div className='flex flex-col gap-3'>
+        <div className='flex flex-col gap-3 sm:col-span-2 col-span-3 lg:col-span-1'>
           <h5 className='font-bold text-black'>Sitemap</h5>
           <ul className='flex flex-col gap-2'>
             <li className='cursor-pointer'>Homepage</li>
@@ -26,7 +26,7 @@ export default function Footer() {
             <li className='cursor-pointer'>Features</li>
           </ul>
         </div>
-        <div className='flex flex-col gap-3'>
+        <div className='flex flex-col gap-3 sm:col-span-2 col-span-3 lg:col-span-1'>
           <h5 className='font-bold text-black'>Resources</h5>
           <ul className='flex flex-col gap-2'>
             <li className='cursor-pointer'>Support</li>
@@ -34,7 +34,7 @@ export default function Footer() {
             <li className='cursor-pointer'>FAQ</li>
           </ul>
         </div>
-        <div className='flex flex-col gap-3'>
+        <div className='flex flex-col gap-3 sm:col-span-2 col-span-3 lg:col-span-1'>
           <h5 className='font-bold text-black'>Company</h5>
           <ul className='flex flex-col gap-2'>
             <li className='cursor-pointer'>About</li>
@@ -42,7 +42,7 @@ export default function Footer() {
             <li className='cursor-pointer'>Blog</li>
           </ul>
         </div>
-        <div className='flex flex-col gap-3'>
+        <div className='flex flex-col gap-3 sm:col-span-2 col-span-3 lg:col-span-1'>
           <h5 className='font-bold text-black'>Portfolios</h5>
           <ul className='flex flex-col gap-2'>
             <li className='cursor-pointer'>Sarah Andrews</li>

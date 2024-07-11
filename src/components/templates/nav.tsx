@@ -5,6 +5,7 @@ import { cookies } from 'next/headers';
 import * as jose from 'jose';
 import prisma from '@/lib/db';
 import { logOutAction } from '@/actions/logout';
+import MobileNav from './mobileNav';
 
 export default async function Nav() {
   const cookie = cookies().get('authorization');
@@ -27,13 +28,13 @@ export default async function Nav() {
   ];
 
   return (
-    <nav className='grid grid-cols-3 items-center h-[120px] w-full '>
+    <nav className='grid lg:grid-cols-3 grid-cols-2 items-center h-[120px] w-full '>
       {/* logo */}
       <Link href={'/'} className='font-bold text-left text-lg cursor-pointer'>
         Fiber
       </Link>
       {/* Menu list */}
-      <ul className=' flex items-center justify-center gap-5'>
+      <ul className='items-center justify-center gap-5 lg:flex hidden'>
         {menu.map((item) => {
           return (
             <li className='cursor-pointer' key={item.name}>
@@ -42,7 +43,7 @@ export default async function Nav() {
           );
         })}
       </ul>
-      <div className='flex items-center gap-5 justify-end'>
+      <div className='items-center gap-5 justify-end lg:flex hidden'>
         {!cookie && (
           <>
             <Link href='/auth/sign-in'>
@@ -72,6 +73,8 @@ export default async function Nav() {
           </>
         )}
       </div>
+      {/* Mobile Menu */}
+      <MobileNav />
     </nav>
   );
 }

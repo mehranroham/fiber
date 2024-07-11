@@ -42,7 +42,7 @@ export default async function Home() {
           <p className='text-4xl font-bold leading-[1.2]'>
             A good portfolio means good <br /> employability.
           </p>
-          <div className='grid grid-cols-3 gap-16 mt-7'>
+          <div className='grid lg:grid-cols-3 grid-cols-1 gap-16 mt-7'>
             {cards.map((card) => {
               return (
                 <Card
@@ -60,22 +60,25 @@ export default async function Home() {
               );
             })}
           </div>
-          <div className='w-full relative rounded-lg bg-primary h-[450px] my-12 flex flex-col justify-center gap-4 text-white items-start px-10'>
-            <Image
-              alt='Page-Image'
-              src={'/assets/Page-Image.png'}
-              width={550}
-              height={550}
-              className='absolute bottom-0 right-10 object-cover'
-            />
-            <h4 className='font-bold text-4xl'>Diversify your portfolio.</h4>
-            <p className='w-[40%] text-[#DBD0F9]'>
-              Create an even more impressive portfolio by creating case studies
-              for your projects. Simply follow our step-by-step guide.
-            </p>
-            <Button bg blue={false}>
-              Start Free Trial
-            </Button>
+          <div className='w-full relative rounded-lg bg-primary h-[450px] my-12 grid grid-cols-2'>
+            <div className='flex flex-col justify-center gap-5 text-white items-start px-10 lg:col-span-1 col-span-2'>
+              <h4 className='font-bold text-4xl'>Diversify your portfolio.</h4>
+              <p className='text-[#DBD0F9]'>
+                Create an even more impressive portfolio by creating case
+                studies for your projects. Simply follow our step-by-step guide.
+              </p>
+              <Button bg blue={false}>
+                Start Free Trial
+              </Button>
+            </div>
+            <div className='relative w-[90%] ml-auto h-[90%] mt-auto mr-14 lg:block hidden'>
+              <Image
+                alt='Page-Image'
+                src={'/assets/Page-Image.png'}
+                fill
+                className='object-cover'
+              />
+            </div>
           </div>
         </section>
       </main>
