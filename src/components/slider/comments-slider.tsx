@@ -37,7 +37,7 @@ export default function Slider() {
       src: '/assets/User-Avatar-3.svg',
     },
     {
-      name: 'Janice Dave',
+      name: 'Janice Dss',
       revenue: '$20k in revenue',
       comment:
         'I only just started freelancing this year have already made more than I ever in my full-time job. The templates are so amazing.',
@@ -45,7 +45,7 @@ export default function Slider() {
       src: '/assets/User-Avatar-3.svg',
     },
     {
-      name: 'Janice Dave',
+      name: 'Janice Dedg',
       revenue: '$20k in revenue',
       comment:
         'I only just started freelancing this year have already made more than I ever in my full-time job. The templates are so amazing.',
@@ -53,7 +53,7 @@ export default function Slider() {
       src: '/assets/User-Avatar-3.svg',
     },
     {
-      name: 'Janice Dave',
+      name: 'Janice Dthc',
       revenue: '$20k in revenue',
       comment:
         'I only just started freelancing this year have already made more than I ever in my full-time job. The templates are so amazing.',

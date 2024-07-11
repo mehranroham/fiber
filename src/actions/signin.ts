@@ -63,5 +63,5 @@ export async function SigninAction(prevState: any, formData: FormData) {
     path: '/',
     sameSite: 'strict',
   });
-  redirect('/profile');
+  redirect('/');
 }
