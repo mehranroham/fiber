@@ -30,7 +30,7 @@ export default async function Nav() {
   return (
     <nav className='grid lg:grid-cols-3 grid-cols-2 items-center h-[120px] w-full '>
       {/* logo */}
-      <Link href={'/'} className='font-bold text-left text-lg cursor-pointer'>
+      <Link href={'/'} className='font-bold text-left text-xl cursor-pointer'>
         Fiber
       </Link>
       {/* Menu list */}

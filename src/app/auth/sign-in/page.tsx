@@ -4,9 +4,9 @@ import Button from '@/components/ui/button';
 import Input from '@/components/ui/input';
 import PassInput from '@/components/ui/pass-input';
 import SingleSlider from '@/components/slider/signup-slider';
-import type { Metadata } from 'next';
 import { SigninAction } from '@/actions/signin';
 import { useFormState } from 'react-dom';
+import Link from 'next/link';
 
 const initialState = {
   message: '',
@@ -39,6 +39,17 @@ export default function Page() {
               <Button bg blue>
                 Sign In
               </Button>
+              <div className='flex justify-between'>
+                <p>
+                  Dont have an account?{' '}
+                  <Link
+                    className='text-primary font-semibold'
+                    href={'/auth/sign-up'}
+                  >
+                    Create one
+                  </Link>
+                </p>
+              </div>
             </form>
           </div>
         </div>

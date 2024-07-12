@@ -1,3 +1,7 @@
+'use client';
+
+import { useFormStatus } from 'react-dom';
+
 export default function Button({
   children,
   bg,
@@ -7,6 +11,8 @@ export default function Button({
   bg: boolean;
   blue: boolean;
 }>) {
+  const { pending } = useFormStatus();
+
   return (
     <>
       <button
@@ -18,7 +24,7 @@ export default function Button({
             : 'bg-none'
         } font-bold py-3.5 px-6 rounded-md transition-colors duration-300 hover:bg-content hover:text-white`}
       >
-        {children}
+        {pending ? 'Pending...' : children}
       </button>
     </>
   );

@@ -17,9 +17,7 @@ export default function SingleSlider() {
     <>
       <Swiper
         spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
+        pagination={{ clickable: true }}
         modules={[Pagination]}
         className='mySwiper'
       >
@@ -34,7 +32,7 @@ export default function SingleSlider() {
             <h4 className='font-bold text-3xl px-[10%]'>
               Unparalleled Templates
             </h4>
-            <p className='font-light text-center px-[10%]'>
+            <p className='font-light text-center px-[10%] mb-10'>
               Crafted by a team of professional designers, our templates are
               eunparalleled in the market.
             </p>
@@ -51,7 +49,7 @@ export default function SingleSlider() {
             <h4 className='font-bold text-3xl px-[10%]'>
               Unparalleled Templates
             </h4>
-            <p className='font-light text-center px-[10%]'>
+            <p className='font-light text-center px-[10%] mb-10'>
               Crafted by a team of professional designers, our templates are
               eunparalleled in the market.
             </p>
@@ -68,7 +66,7 @@ export default function SingleSlider() {
             <h4 className='font-bold text-3xl px-[10%]'>
               Unparalleled Templates
             </h4>
-            <p className='font-light text-center px-[10%]'>
+            <p className='font-light text-center px-[10%] mb-10'>
               Crafted by a team of professional designers, our templates are
               eunparalleled in the market.
             </p>
@@ -85,7 +83,7 @@ export default function SingleSlider() {
             <h4 className='font-bold text-3xl px-[10%]'>
               Unparalleled Templates
             </h4>
-            <p className='font-light text-center px-[10%]'>
+            <p className='font-light text-center px-[10%] mb-10'>
               Crafted by a team of professional designers, our templates are
               eunparalleled in the market.
             </p>

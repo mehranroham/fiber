@@ -1,5 +1,6 @@
 import Footer from '@/components/templates/footer';
 import Nav from '@/components/templates/nav';
+import Button from '@/components/ui/button';
 
 import prisma from '@/lib/db';
 import Image from 'next/image';
@@ -40,10 +41,12 @@ export default async function page() {
                 </div>
                 <p className='line-clamp-3'>{comment.content}</p>
                 <Link
-                  className='flex items-center justify-center border-2 border-border py-2 rounded-md'
+                  className='w-full flex justify-center'
                   href={`comments/${comment.id}`}
                 >
-                  Details Page
+                  <Button bg={false} blue={false}>
+                    Details Page
+                  </Button>
                 </Link>
               </li>
             );

@@ -6,6 +6,7 @@ import PassInput from '@/components/ui/pass-input';
 import SingleSlider from '@/components/slider/signup-slider';
 import { useFormState } from 'react-dom';
 import { SignupAction } from '@/actions/signup';
+import Link from 'next/link';
 
 const initialState = {
   message: '',
@@ -53,6 +54,17 @@ export default function Page() {
               <Button bg blue>
                 Create Fiber Account
               </Button>
+              <div className='flex justify-between'>
+                <p>
+                  Alredy have an account?{' '}
+                  <Link
+                    className='text-primary font-semibold'
+                    href={'/auth/sign-in'}
+                  >
+                    Login Page
+                  </Link>
+                </p>
+              </div>
             </form>
           </div>
         </div>
