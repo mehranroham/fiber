@@ -11,13 +11,13 @@ export default async function page() {
   });
 
   return (
-    <div className='bg-header-bg h-screen w-full'>
+    <div className='bg-header-bg min-h-screen w-full'>
       <div className='max-w-7xl mx-auto flex flex-col gap-12 items-center px-[5%] mb-20'>
         <Nav />
         <h2 className='text-2xl font-semibold mb-10'>
           All Comments ({comments.length})
         </h2>
-        <ul className='grid gap-5 grid-cols-3'>
+        <ul className='grid gap-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
           {comments.map((comment) => {
             return (
               <li

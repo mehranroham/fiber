@@ -74,7 +74,7 @@ export default async function Nav() {
         )}
       </div>
       {/* Mobile Menu */}
-      <MobileNav />
+      <MobileNav menu={menu} cookie={cookie} />
     </nav>
   );
 }

@@ -63,3 +63,8 @@
   width: 10px;
   height: 10px;
 }
+
+.swiper-wrapper {
+  padding-bottom: 0px !important;
+  align-items: center;
+}

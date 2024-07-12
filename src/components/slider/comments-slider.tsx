@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Image from 'next/image';
+import '../../app/globals.css';
 
 type Comment = {
   auther: {
@@ -62,7 +63,7 @@ export default function Slider({ comments }: { comments: Comment[] }) {
                   </div>
                 </div>
                 <p className='line-clamp-4'>{comment.content}</p>
-                <button className='font-bold text-primary border-2 py-3'>
+                <button className='font-semibold rounded-md outline-none text-primary border py-3 transition-colors duration-300 hover:bg-content hover:text-white'>
                   {`View ${comment.auther.name.split(' ')[0]}'s Portfolio`}
                 </button>
               </div>

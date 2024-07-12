@@ -16,7 +16,7 @@ export default function Button({
             : !blue && bg
             ? 'bg-white text-primary'
             : 'bg-none'
-        } font-bold py-3.5 px-6 rounded-md transition-colors duration-300 hover:bg-blue-700 hover:text-white`}
+        } font-bold py-3.5 px-6 rounded-md transition-colors duration-300 hover:bg-content hover:text-white`}
       >
         {children}
       </button>
