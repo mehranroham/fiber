@@ -1,6 +1,6 @@
 import Footer from '@/components/templates/footer';
 import Nav from '@/components/templates/nav';
-import Button from '@/components/ui/button';
+
 import prisma from '@/lib/db';
 import Image from 'next/image';
 import Link from 'next/link';

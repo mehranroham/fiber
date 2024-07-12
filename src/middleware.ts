@@ -11,14 +11,14 @@ export async function middleware(request: NextRequest) {
   }
 
   // Validate it
-  const secret = new TextEncoder().encode(process.env.JWT_SECRET);
-  const jwt = cookie.value;
+  // const secret = new TextEncoder().encode(process.env.JWT_SECRET);
+  // const jwt = cookie.value;
 
-  try {
-    await jose.jwtVerify(jwt, secret, {});
-  } catch (err) {
-    return NextResponse.redirect(new URL('/auth/sign-in', request.url));
-  }
+  // try {
+  //   await jose.jwtVerify(jwt, secret, {});
+  // } catch (err) {
+  //   return NextResponse.redirect(new URL('/auth/sign-in', request.url));
+  // }
 }
 
 // See "Matching Paths" below to learn more

@@ -1,6 +1,6 @@
 const comments = [
   {
-    name: 'Mathew Higgins',
+    name: 'Sarah Andrews',
     revenue: '$100k in revenue',
     comment:
       'Setting up my portfolio with Fiber took no more than 10 minutes. Since then, my portfolio has attracted a lot of clients and made me more than $100k.',
@@ -22,13 +22,5 @@ const comments = [
       'I only just started freelancing this year have already made more than I ever in my full-time job. The templates are so amazing.',
     button: "View Janice's Portfolio",
     src: '/assets/User-Avatar-3.svg',
-  },
-  {
-    name: 'Janice Dss',
-    revenue: '$20k in revenue',
-    comment:
-      'I only just started freelancing this year have already made more than I ever in my full-time job. The templates are so amazing.',
-    button: "View Janice's Portfolio",
-    src: '/assets/avatar.png',
   },
 ];
