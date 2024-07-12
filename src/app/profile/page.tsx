@@ -26,6 +26,7 @@ export default async function page() {
 
   return (
     <div className='w-full h-screen grid grid-cols-6 border-r-2 shadow-lg font-Poppins-Medium'>
+      {/* sidebar */}
       <ul className='lg:col-span-1 sm:col-span-2 col-span-6 bg-primary flex items-center flex-col py-10 gap-7 text-white'>
         <div className='flex flex-col gap-5 items-center justify-between mb-5'>
           <Image
@@ -60,14 +61,15 @@ export default async function page() {
         </form>
       </ul>
 
+      {/* main section */}
       <div className='lg:col-span-5 sm:col-span-4 col-span-6 bg-header-bg grid grid-cols-2 gap-x-5 px-10'>
-        <div className='w-full py-14 flex flex-col gap-5 col-span-2 lg:col-span-1'>
+        <div className='w-full py-10 flex flex-col gap-5 col-span-2 lg:col-span-1'>
           <div className='flex flex-col gap-5 mb-10'>
             <h3 className='font-Poppins-Bold text-center text-lg border-b-2 pb-1.5'>
               User Info
             </h3>
             <p className='font-Poppins-Bold text-lg'>Welcome {user?.name}</p>
-            <p>{user?.email}</p>
+            <p>E-mail: {user?.email}</p>
           </div>
           <form
             action={PortfolioAction}
@@ -116,7 +118,7 @@ export default async function page() {
           {user?.comments.map((comment) => {
             return (
               <li
-                className='border-2 border-border bg-white flex flex-col items-center py-5 rounded-md'
+                className='border-2 border-border bg-white flex flex-col items-center py-5 rounded-md px-3'
                 key={comment.id}
               >
                 <p>{comment.revenue}</p>
